@@ -1,0 +1,13 @@
+ 
+****************************************
+Report : resources
+Design : cpu
+Version: I-2013.12-SP5-3
+Date   : Mon Aug 14 03:24:35 2017
+****************************************
+
+
+No resource sharing information to report.
+
+No implementations to report
+1

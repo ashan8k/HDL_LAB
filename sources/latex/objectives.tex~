@@ -1,0 +1,109 @@
+\section{Primary Objectives}
+
+\subsection{Processor Design in Verilog}
+Design a processor that can execute \textit{Thumb} instructions
+ for the instruction set given in the Thumb Quick Reference Card \cite{QRC}. Implement all instructions in the following sections: Move, Ad, Subtract, Multiply, Compare, Logical, Shift/Rotate, Load, Store, Push, Pop, If-Then, Branch, Extend, Reverse, No Op. Do not implement Processor State Change and Hint. Refer to the ARM Architecture Manual \cite{ARMARM} for a detailed description of the instruction set. \\
+
+The entire program code is stored in a 4Kx16 fully-buffered, single-port random access memory (RAM). 4Kx16 means that it has 4096 entries (depth) of 16 bit (width) each and it can store 8KB (B = byte, b = bit) in total. Fully-buffered means that its inputs as well as its outputs are registered. On a write the memory contents update with the next rising edge of the clk input. On a read the data is delayed by one cycle before appearing at the ouptut.
+This memory can be clocked at up to 523 Mhz.
+
+\subsubsection*{Internal Structure}
+An instruction set does not yet define the implementation of the cpu. It merely defines what registers exist, what instructions the cpu can process, what an instruction means etc. Therefore the architecture is up to you, with only one constraint: Use at least 2 pipeline stages.
+Hint: Try to stick to the basic structure in the section ``Best Practices''.
+
+\subsection{Register-Transfer-Level Simulation and Verification}
+There are many ways to verify a design's correctness. In this lab you will create a \textit{directed test bench} and simulate it in Modelsim (a tutorial is provided in \cite{mentor}). This means you will define test cases in the form of C-programs as in appendix \ref{c:count32}. Using the provided makefile in appendix \ref{makefile} you can compile your test programs into ARM-assembler language files (.asm), executable and linkable files (.elf) and binary files (.bin).\\
+Keep these programs simple as you will need to trace the program execution on your waveform viewer. When writing test programs also specify the correct expected results (golden model).\\
+Once this is done you will simulate your DUT (device under test, i.e. cpu) with these test cases as memory content (stimulus) and compare the final memory content with the expected results.\\
+\begin{itemize}
+\item Review and understand the provided testbench and memory in the appendix. Use it as your starting point and adapt it where needed.
+\item Write test programs (and document them) to ensure that all instructions work properly.
+\item You are allowed to share test programs and verify your design with other groups' test programs. Give them credit in your report!
+\item Include an active-high finish\_out signal in your design and assert it, when your program is done.
+\end{itemize}
+%An optional improvement to your testing effort is to write an \textit{automated directed test bench} which executes all test cases one after the other and automatically compares results with your predefined results.\\
+%A much more advanced testing variant is \textit{constrained random testing} which is beyond the scope of this lab.
+
+\subsection{Synthesis}
+During the design process you will frequently synthesize your design with Synopsys Design Compiler using a 130nm standard cell library and Design Ware Building Blocks (DWBB). This will give you key metrics that will guide your design process. In particular, the synthesis tool will tell you how fast your circuit will be.\\
+As a rule of thumb: Code that you write should be synthesized by the end of the day. (In the beginning try lots of small iterations. Later - when you know what you are doing - try longer iterations.) Appendix \ref{tut:syn} is a tutorial on synthesis. It gives you a good starting point and produces all reports you need. Refer to \cite{synopsys} for in-depth documentation.\\
+Take a look at your synthesis reports and understand key metrics:
+\begin{itemize}
+\item frequency
+\item (critical path delay)
+\item area
+\item power
+\end{itemize} Be able to explain these metrics. When optimizing your design observe how key metrics correlate with each other.
+
+
+\subsection{Gate-Level Simulation}
+Synthesis transforms your register-transfer-level design (RTL) into a gate-level design (GL). This is a net list of standard cells with their corresponding delays annotated. Simulating on this net list allows you to verify functionality as well as timing. A tutorial is provided in appendix \ref{tut:gls}.\\
+Once at the end of each week make sure, that you your example programs simulate correctly as in your RTL simulations. For fully-synchronous single-clocked designs you should not expect any surprises here. In asynchronous or multi-clock designs you'll be able to find bugs on gate-level that did not occur at register-transfer-level.\\
+When you simulate on GL look at the waveforms and observe the switching activity. Review the terms slack, critical path and setup time.
+
+\subsection{Place and Route (PAR)}
+TODO 2013
+\subsection{Post-PAR Simulation}
+TODO 2013
+
+
+\newpage
+\section{Secondary Objectives}
+When you are confident to have a functionally correct and synthesizable design you are ready to advance to the secondary objectives. The main task in this section is to 
+\textbf{optimize for execution time} by using the techniques described in the following subsections. The basic optimization cycle starts with an evaluation of your current design. Once you have found and understood a performance bottleneck you will think of ways to push the limits, implement additional circuitry and start over.  Document your key figures and reasoning in each design refinement step. In most cases there is no optimal solution (or it's hard to tell before you try it out).
+Before you start coding any of the following extensions:
+\begin{itemize}
+\item Write a program, to demonstrate the extension's effectiveness. Calculate the speed increase. Note that sometimes it suffices to recompile an existing program with different compiler optimizations, i.e. -O3 instead of -O0 in the makefile)
+\item Think of how you want to integrate it in your processor. Is it an additional pipeline stage? Is it a modification to one (or more) existing pipeline stage(s)?
+\item Always KISS: ''Keep it Simple and Stupid!'' (If nothing else, remember this)
+\end{itemize}
+After (and while) designing an extension:
+\begin{itemize}
+\item Make sure that you do not break your other test programs.
+\end{itemize}
+
+\subsection{Instruction/Data Chache}
+If memory bandwidth lags behind cpu performance:
+\begin{itemize}
+\item Build a configurable cache with parameters:
+\begin{itemize}
+\item	CACHE\_ON=[0 | 1]\\
+		determines if a cache is instantiated (1) or not (0).
+\item	CACHE\_SIZE= [2 | 4 | 8 | 16 | 32]\\
+		determines the number of words in your cache.
+\item	Additional parameters as needed (depending on policy).
+\end{itemize} 
+\item Cache policy and associativity is up to you. (KISS)
+\end{itemize}
+
+\subsection{Branch Prediction}		 
+If a long pipeline causes long latency at branches:
+\begin{itemize}
+\item Build a branch prediction unit with parameters:
+\begin{itemize}
+\item	BP\_ON=[0 | 1]\\
+		determines if a branch predictor is instantiated (1) or not (0).
+\item	Additional parameters as needed (depending on policy).
+\end{itemize} 
+\item Algorithm is up to you. (KISS)
+\end{itemize}
+
+\subsection{Superscalar Execution}
+If cpu performance lags behind memory bandwidth:
+\begin{itemize}
+\item Duplicate (triplicate, ...) the execution unit and add additional circuitry for decoding and distributing instructions and handling hazards.
+\item Use parameters:
+\begin{itemize}
+\item	SS\_<UNIT>=[ (default: 1) | 2 | 3... ]\\
+		indicating which unit is duplicated, triplicated...\\
+		Replace <UNIT> with DEC, EX or other appropriate name
+\item	Additional parameters as needed.
+\end{itemize} 
+\end{itemize}
+
+\subsection{Balanced Pipeline}
+If cpu performance lags behind memory bandwidth:
+\begin{itemize}
+	\item Split execute stage in two or more stages and add additional circuitry to handle hazards.
+	\item If you have registered all your execute-stage outputs properly, this is an easy task. Look up the DesignCompiler command ``balance\_registers''.
+\end{itemize}

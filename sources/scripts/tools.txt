@@ -1,0 +1,61 @@
+################################################################
+### IES SERVERS AND TOOLS ###
+################################################################
+
+#start the lab pc
+#enter username + password
+#open a terminal
+#login to an IES server and work there (use 64bit machines for gcc)
+#64bit-server := [ falbala | adonix ]
+#32bit-server := [ obelix | talentix | gibtermine ]
+ssh -X username@server
+
+#list available tools
+module avail
+
+#load tools
+module load modelsim
+module load syn
+
+#verify loaded modules
+module list
+
+#start Design Vision in graphical mode from syn
+design_vision
+
+#start Modelsim from sim directory
+vsim &
+
+#to unload a tool
+module unload <module name>
+
+
+###############################################
+####If Modelsim crashes...
+###############################################
+#find its process id (pid) with
+ps aux | grep vsim
+#then kill it with
+kill <pid>
+
+###############################################
+####To change your password...
+###############################################
+#log on to idefix:
+ssh <username>@idefix
+#and from there type:
+smbpasswd
+#for some accounts the above doesn't work. in this case try:
+passwd
+
+##############################################
+####To logon from your gnu/linux laptop
+##############################################
+# (this is testet on the debian distribution)
+# requirements:
+# 1. a stable internet connection
+# 2. an IP address from TU darmstadt obtained by
+#	* eduroam or
+#	* VPN
+set MGLS_LICENSE_FILE=1717@idefix.ies.tu-darmstadt.de
+ssh <server>.ies.tu.darmstadt.de

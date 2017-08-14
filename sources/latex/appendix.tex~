@@ -1,0 +1,53 @@
+
+\newpage
+\begin{appendix}
+\section{IES Servers and Tools}
+\subsection{Login Procedure}
+\lstinputlisting[language=bash]{tutorials/tools.txt}
+\newpage
+\subsection{Design Compiler Configuration}
+\lstinputlisting[language=bash]{../../project/hw/dc_work/.synopsys_dc.setup}
+Note: this file must be either in your home directory or in the directory from which you invoke design\_vision!
+
+\subsection{NxClient Configuration}
+Server\\
+host:	falbala.ies.e-technik.tu-darmstadt.de\\
+port:	22\\\\
+Desktop\\
+Unix - Gnome\\
+If working from inside the TU Darmstadt-network this works fine. From the outside you first need to VPN to the HRZ to get a TUD IP address. A simple description for this is available here:\url{http://www.hrz.tu-darmstadt.de/dienste/netz_und_internet/vpn_wlan/vpn_service/vpn_anleitungen/vpn_anleitung_idx.de.jsp}
+
+\newpage
+\section{Provided Verilog and SystemVerilog Templates}
+\lstinputlisting[language=Verilog]{../../project/hw/src/cpu.v}
+\newpage
+\lstinputlisting[language=SystemVerilog]{../../project/hw/tb/memory.sv}
+\newpage
+\lstinputlisting[language=SystemVerilog]{../../project/hw/tb/testbench.sv}
+
+\newpage
+\section{Provided Software Templates}
+\subsection{Test Programs}
+\lstinputlisting[language=C]{../../project/sw/src/count32.c}\label{c:count32}
+\lstinputlisting[language=C]{../../project/sw/src/count32.dasm}\label{c:count32.dasm}\newpage
+\lstinputlisting[language=C]{../../project/sw/src/count32.bintxt}\label{c:count32.bin}\newpage
+\lstinputlisting[language=C]{../../project/sw/src/count32.goldtxt}\label{c:count32.gold}\newpage
+\newpage
+\lstinputlisting[language=C]{../../project/sw/src/memcpy46.c}\label{c:memcpy46}
+\lstinputlisting[language=C]{../../project/sw/src/memcpy46.dasm}\label{c:memcpy46.dasm}
+
+\newpage
+\subsection{Makefile and Linker Script}
+\lstinputlisting[language=make]{../../project/sw/src/makefile}\label{makefile}
+\lstinputlisting[language=make]{../../project/sw/src/default.ld}\label{linkerscript}
+
+\newpage
+\section{Synthesis Script for Design Compiler}
+\lstinputlisting[language=tcl]{../../project/hw/scripts/synthesis}\label{tut:syn}
+
+\newpage
+\section{Gate-Level-Simulation Script for Modelsim}
+\lstinputlisting[language=tcl]{../../project/hw/scripts/gate_level_simulation}\label{tut:gls}
+
+\end{appendix}
+

@@ -1,0 +1,140 @@
+\documentclass[10pt,a4paper, twoside]{article}
+
+\usepackage[english]{babel} %English
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{wrapfig}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{appendix}
+\usepackage{url}
+
+\usepackage{listings}
+\lstset{language=Verilog,basicstyle=\tiny\ttfamily}
+
+\pagestyle{fancy}
+
+\definecolor{blue}{RGB}{0,78,138}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  language=tcl,						% the language of the code
+  basicstyle=\small\ttfamily,		% the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+  stepnumber=1,                   % the step between two line-numbers. If it's 1, each line 
+                                  % will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},      % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                  % also try caption instead of title
+  keywordstyle=\color{dkgreen},   % keyword style
+  commentstyle=\color{blue},      % comment style
+  stringstyle=\color{mauve}\ttfamily,      % string literal style
+  escapeinside={\%*}{*)},         % if you want to add a comment within your code
+  morekeywords={*,...}            % if you want to add more keywords to the set
+}
+
+\lstdefinelanguage{SystemVerilog}{
+  keywords={always_ff, always_comb, if, begin, end, else, case, endcase, typedef, const, logic, integer, assign, parameter, localparam, module, posedge, negedge, enum, input, output},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{red}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  %morestring=[b]',
+  morestring=[b]"
+}
+
+
+
+
+\addtolength{\headheight}{48pt}
+%top
+%%\setlength{\voffset}{-1.0cm}
+\setlength{\voffset}{-1.5cm}
+%\setlength{\headsep}{1.7cm}
+\setlength{\textwidth}{15cm}
+\setlength{\headwidth}{15cm}
+%\setlength{\footwidth}{15cm}
+%\setlength{\marginparsep}{0.2cm}
+%\setlength{\marginparwidth}{1.5cm}
+
+%side
+\setlength{\hoffset}{+0.44cm}
+\setlength{\oddsidemargin}{+1.0cm}
+\setlength{\evensidemargin}{-1.0cm}
+
+%\fancyhead{}
+%\fancyfoot{}
+
+\fancyhead[LO, LE]{\includegraphics[width=2.3cm]{ies}}
+\fancyhead[RO, RE]{\includegraphics[width=5.0cm]{athene}}
+\fancyhead[CO, CE]{
+\raisebox{0.78cm}{\parbox{10cm}{
+\begin{flushleft}
+\color{blue}
+\hspace*{0.75cm}Prof. Dr.-Ing. Hofmann\\
+\hspace*{0.75cm}Integrated Electronic Systems Lab\\
+\hspace*{0.75cm}Merckstr. 25, D-64283 Darmstadt\\
+\end{flushleft}}}
+}
+\fancyfoot[LE, LO]{
+\color{blue}
+Dipl.-Ing. Boris Traskov\\
+\href{mailto:boris.traskov@ies.tu-darmstadt.de}{boris.traskov@ies.tu-darmstadt.de}
+}
+
+\fancyfoot[CE,CO] { }
+\fancyfoot[RO,RE] {page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\title{HDL Lab Manual 2012}
+\author{Dipl.-Ing. Boris Traskov}
+
+\pagestyle{fancy}
+\begin{document}
+\thispagestyle{fancy}
+\maketitle
+
+\thispagestyle{fancy}
+\tableofcontents
+\thispagestyle{fancy}
+
+\input{introduction}
+\input{objectives}
+\input{best_practices}
+\input{deliverables_and_exam}
+%\input{technology_primers}
+\input{appendix}
+
+\nocite{*}
+\bibliography{bib}{}
+\bibliographystyle{plain}
+
+
+
+\end{document}

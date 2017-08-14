@@ -1,0 +1,35 @@
+ 
+****************************************
+Report : reference
+Design : cpu
+Version: I-2013.12-SP5-3
+Date   : Mon Aug 14 03:24:35 2017
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+INVD1BWP12T        tcbn45gsbwp12ttc_ccs
+                                  0.705600       2      1.411200  
+TIEHBWP12T         tcbn45gsbwp12ttc_ccs
+                                  0.705600       1      0.705600  
+TIELBWP12T         tcbn45gsbwp12ttc_ccs
+                                  0.705600       1      0.705600  
+decode_control_REG_WIDTH16      542.606393       1    542.606393  h, n
+execute_REG_WIDTH16             919.631998       1    919.631998  h, n
+fetch_mem_wr_ADDR_WIDTH12_REG_WIDTH16
+                                451.348798       1    451.348798  h, n
+reg_rd_wr_REG_WIDTH16          2830.396782       1   2830.396782  h, n
+-----------------------------------------------------------------------------
+Total 7 references                                   4746.806370
+1

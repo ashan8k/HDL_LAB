@@ -1,0 +1,47 @@
+How to start
+
+Tasks for Monday
+M1. Take a look at the count32.c program. Understand what it's supposed to do. 
+M2. Take a look at the disassembled form. Refer to the ARM Reference Manual.
+M3. Trace the program's execution step by step.
+M4. For each instruction's execution, write down:
+* which encoding format (T1, T2, ...) does it use?
+* which values does it read (and from where)?
+* which registers are updated (and the new values)?
+(consider only the first 2-3 loops)
+M5. Draw the execution trace.
+M6. Based on the used instructions, discuss how many adders/subtractors/multipliers you'll need in your entire circuit and what size should they be?
+M7. Draw your datapath's schematic. Distinguish combinational and sequential blocks with two colors. Do not forget to consider memory and register delays!
+Outcome: You have understood the task of this lab. Your head should hurt now. This is a good sign... synapses are rearanging.
+Hint: Write down the answers to these questions on paper. They will help you remember your decision making process. Bring this with you for the next 2 weeks.
+
+Tasks for Tuesday
+
+T1. Review the design process.
+* Start Modelsim and simulate the example testbench. Play around with all the buttons you see and take note of the command line window.
+* Start Synopsys Desing Vision and synthesize the example module. 
+* Start Modelsim and simulate the GL-netlist.
+T2. Review and discuss your datapath from Monday.
+T3. Discuss how to proceed from here. Work distribution, schedule, appointments, absences, how to start design.
+
+
+Read the following:
+
+A1.2 The ARM and Thumb instruction sets
+A1.5 The ARM memory model
+A2.2 ARM core data types and arithmetic
+(only first page)
+A2.3 ARM core registers
+A2.4 The Application Program Status Register (APSR)
+(only first 4 bits are relevant for the HDL Lab)
+A3.1 Address space
+A3.2 Alignment support
+A3.3 Endian support
+A6.2 16-bit Thumb instruction encoding
+A8 Instruction Details
+(only T-Type Encodings, to be used as a reference)
+
+Appendix I Pseudocode Definition
+Appendix J Pseudocode Index
+Appendix K Register Index
+Glossary

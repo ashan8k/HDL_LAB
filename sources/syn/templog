@@ -1,0 +1,28 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+         Version I-2013.12-SP5-3 for RHEL64 -- Oct 07, 2014
+               Copyright (c) 1988-2014 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+Error: could not open script file "/home/vhdlp19/ASHAN/hdl_repo/sources/syn/run_all.tcl" (CMD-015)
+design_vision> 
+Information: Interrupting current command. (INT-2)
+Information: One more interrupt will exit process. (INT-3)
+Information: Process terminated by interrupt. (INT-4)

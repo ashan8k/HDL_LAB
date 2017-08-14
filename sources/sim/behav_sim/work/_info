@@ -1,0 +1,235 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/vhdlp19/ASHAN/hdl_repo/sources/sim/behav_sim
+T_opt
+!s110 1502647921
+V<8V`?VCX3fYY1CKQbmUc20
+04 6 4 work tb_cpu fast 0
+=2-001517f7e434-59909671-66cea-462d
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OL;O;10.3d;59
+R0
+valu
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+!s85 0
+31
+!i10b 1
+!s100 DbY0>S6I2_fb?TR7Z[EfK0
+IXl@_VnnDVRgf3S6];:3ic3
+R0
+w1502649063
+8/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/alu.v
+F/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/alu.v
+L0 1
+Z2 OL;L;10.3d;59
+!s108 1502674258.218651
+!s107 /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/alu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/alu.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vcontrol
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 m_LMWJ8;e7PF2D04KB;CK0
+I`@HOL89e4dh[@9[OoSW]i3
+R0
+w1502673340
+8/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/control.v
+F/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/control.v
+L0 6
+R2
+!s108 1502674258.296564
+!s107 /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/control.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/control.v|
+!i113 0
+R3
+vcpu
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 He6B@2KWYj_:i15^I1?T`2
+I92OTND``5z8:BBARjn>aj2
+R0
+w1502555384
+8/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/cpu.v
+F/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/cpu.v
+Z4 L0 10
+R2
+!s108 1502674258.397471
+!s107 /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/cpu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/cpu.v|
+!i113 0
+R3
+vdecode
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 WkaMf;4`ZD9@1DVJOEDk;3
+IPR@DVD5W@3eQWcc9:07Yz2
+R0
+w1502551860
+8/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/decode.v
+F/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/decode.v
+L0 6
+R2
+!s108 1502674258.469990
+!s107 /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/decode.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/decode.v|
+!i113 0
+R3
+vdecode_control
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 Faa3]`AR4Y^CZU18f2DzA0
+IOElLDXfW;kdz9O0DcnP@m2
+R0
+w1502556574
+8/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/decode_control.v
+F/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/decode_control.v
+L0 6
+R2
+!s108 1502674258.561119
+!s107 /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/decode_control.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/decode_control.v|
+!i113 0
+R3
+vexecute
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 8KCPngYFeoa3K[V=Xn9X=3
+I0J`H[]44^JB6kk>7J5<hQ3
+R0
+w1502651389
+8/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/execute.v
+F/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/execute.v
+L0 6
+R2
+!s108 1502674258.630434
+!s107 /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/execute.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/execute.v|
+!i113 0
+R3
+vfetch_mem_wr
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 VUZhR>FeI7A:zJDJ<I57j0
+Iz^aK:42dBEE9fljKnP8e50
+R0
+w1502670885
+8/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/fetch_mem_wr.v
+F/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/fetch_mem_wr.v
+L0 6
+R2
+!s108 1502674258.699654
+!s107 /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/fetch_mem_wr.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/fetch_mem_wr.v|
+!i113 0
+R3
+vmemory
+Z5 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 An=R:H>h3K[onT5[DN1<;0
+Iel@m7hXe7C`c4Qfd?zEj[0
+Z6 !s105 tb_cpu_sv_unit
+S1
+R0
+Z7 w1502674247
+F/home/vhdlp19/ASHAN/hdl_repo/sources/testbench/./memory.sv
+Z8 8/home/vhdlp19/ASHAN/hdl_repo/sources/testbench/tb_cpu.sv
+Z9 F/home/vhdlp19/ASHAN/hdl_repo/sources/testbench/tb_cpu.sv
+L0 9
+R2
+Z10 !s108 1502674258.116990
+Z11 !s107 /home/vhdlp19/ASHAN/hdl_repo/sources/testbench/./memory.sv|/home/vhdlp19/ASHAN/hdl_repo/sources/testbench/tb_cpu.sv|
+Z12 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/vhdlp19/ASHAN/hdl_repo/sources/testbench/tb_cpu.sv|
+!i113 0
+Z13 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vreg_rd_wr
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 B1nz[B_8ZkiL1A1WQDNJ80
+Im_cCXRBSBk]58;mZhoJah0
+R0
+w1502556606
+8/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/reg_rd_wr.v
+F/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/reg_rd_wr.v
+L0 6
+R2
+!s108 1502674258.769373
+!s107 /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/reg_rd_wr.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/reg_rd_wr.v|
+!i113 0
+R3
+vregisters
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 hczAW9DBak7]HATJR_zJT1
+I_e@2LC5V:3_Yf1jHR2gAo0
+R0
+w1502556618
+8/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/registers.v
+F/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/registers.v
+L0 6
+R2
+!s108 1502674258.839505
+!s107 /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/registers.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/registers.v|
+!i113 0
+R3
+vtb_cpu
+R5
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 ZPzKXND=FIm^=1FTPoVOg1
+I9MgUBOIobmjXj<VF<l^3j1
+R6
+S1
+R0
+R7
+R8
+R9
+R4
+R2
+R10
+R11
+R12
+!i113 0
+R13

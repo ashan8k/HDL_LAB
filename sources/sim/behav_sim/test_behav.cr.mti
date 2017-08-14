@@ -1,0 +1,72 @@
+/home/vhdlp19/ASHAN/hdl_repo/sources/rtl/fetch_mem_wr.v {1 {vlog -work work -vopt -stats=none /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/fetch_mem_wr.v
+Model Technology ModelSim SE-64 vlog 10.3d Compiler 2014.10 Oct  6 2014
+-- Compiling module fetch_mem_wr
+
+Top level modules:
+	fetch_mem_wr
+
+} {} {}} /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/registers.v {1 {vlog -work work -vopt -stats=none /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/registers.v
+Model Technology ModelSim SE-64 vlog 10.3d Compiler 2014.10 Oct  6 2014
+-- Compiling module registers
+
+Top level modules:
+	registers
+
+} {} {}} /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/decode_control.v {1 {vlog -work work -vopt -stats=none /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/decode_control.v
+Model Technology ModelSim SE-64 vlog 10.3d Compiler 2014.10 Oct  6 2014
+-- Compiling module decode_control
+
+Top level modules:
+	decode_control
+
+} {} {}} /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/decode.v {1 {vlog -work work -vopt -stats=none /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/decode.v
+Model Technology ModelSim SE-64 vlog 10.3d Compiler 2014.10 Oct  6 2014
+-- Compiling module decode
+
+Top level modules:
+	decode
+
+} {} {}} /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/cpu.v {1 {vlog -work work -vopt -stats=none /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/cpu.v
+Model Technology ModelSim SE-64 vlog 10.3d Compiler 2014.10 Oct  6 2014
+-- Compiling module cpu
+
+Top level modules:
+	cpu
+
+} {} {}} /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/control.v {1 {vlog -work work -vopt -stats=none /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/control.v
+Model Technology ModelSim SE-64 vlog 10.3d Compiler 2014.10 Oct  6 2014
+-- Compiling module control
+
+Top level modules:
+	control
+
+} {} {}} /home/vhdlp19/ASHAN/hdl_repo/sources/testbench/tb_cpu.sv {1 {vlog -work work -vopt -sv -stats=none /home/vhdlp19/ASHAN/hdl_repo/sources/testbench/tb_cpu.sv
+Model Technology ModelSim SE-64 vlog 10.3d Compiler 2014.10 Oct  6 2014
+-- Compiling module memory
+-- Compiling module tb_cpu
+
+Top level modules:
+	tb_cpu
+
+} {} {}} /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/alu.v {1 {vlog -work work -vopt -stats=none /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/alu.v
+Model Technology ModelSim SE-64 vlog 10.3d Compiler 2014.10 Oct  6 2014
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/execute.v {1 {vlog -work work -vopt -stats=none /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/execute.v
+Model Technology ModelSim SE-64 vlog 10.3d Compiler 2014.10 Oct  6 2014
+-- Compiling module execute
+
+Top level modules:
+	execute
+
+} {} {}} /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/reg_rd_wr.v {1 {vlog -work work -vopt -stats=none /home/vhdlp19/ASHAN/hdl_repo/sources/rtl/reg_rd_wr.v
+Model Technology ModelSim SE-64 vlog 10.3d Compiler 2014.10 Oct  6 2014
+-- Compiling module reg_rd_wr
+
+Top level modules:
+	reg_rd_wr
+
+} {} {}}

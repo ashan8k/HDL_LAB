@@ -1,2 +1,0 @@
-# HDL_LAB
-Arm CPU
